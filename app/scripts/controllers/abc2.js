@@ -1,0 +1,15 @@
+angular.module('1110App')
+.controller("zuoye",function($scope,$http){
+     $http({
+        url:"http://www.somenote.cn:1510/test",
+        method:"get"
+    }).success(function(e){
+        $scope.mdata=e
+     });
+    $http({
+        url:"http://www.somenote.cn:1510/aut",
+        method:"get"
+    }).success(function(data){
+        $scope.xdata=data
+     })
+   })
